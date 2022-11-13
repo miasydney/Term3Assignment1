@@ -1,6 +1,7 @@
 # T3A1 - Workbook
 #### Mia Benn
-##### Due date: 12 Nov 2022
+##### Due date: 13 Nov, 2022
+
 
 ### Q1 Provide an overview and description of a standard source control process for a large project
 
@@ -10,7 +11,9 @@ They will make changes and implement features as necessary, according to their r
 
 The process effectively allows those working on the project are able to track code changes, see entire history for their code and others code in their team and revert the project to previous versions if necessary (AWS, 2022). It also allows for the main codebase to remain unaffected by changes, including mistakes that individual contributors to the project may make when implementing new features. 
 
+
 ### Q2 What are the most important aspects of quality software?
+
 CISQ (the Consortium for Information & Software Quality), has defined a set of software standards that are broken into four key characteristics: Reliability, Security, Performance Efficiency and Maintainability (CISQ, 2022). The new standard for software quality standards is the ISO 5055(CISQ, 2022). All of the information in the following listed characteristics have been drawn directly from the CISQ website which details software engineering rules contained within each requirement for quality, for both the ‘coding practices at unit level’ and ‘architectural practices at system level’.
 - The **reliability** software characteristic, at the coding practices level involves protecting state in multi threaded environments, safe use of inheritance and polymorphism. Also managing allocated resources, time outs. At the architectural practices system level, it requires multi layer design compliance and that the software manages data integrity and consistency as well as exception handling through transactions and class architecture compliance.
 - The **performance efficiency** at a coding unit level requires compliance with Object-Oriented best practices - this means… It requires compliance with SQL best practices. Compliance with garbage collection best practices. At an architectural level, the code must interact appropriately with any remote resources. It must have adequate memory, network and disk space management. As well as centralised handling of client requests, meaning a centre point of interaction between the organisations employees and business partners or customers in order to efficiently resolve queries - this could be achieved through an IT service desk (ProProfs, 2022).
@@ -23,6 +26,8 @@ Measuring software according these standards determines how trustworthy, dependa
 ### Q3 Outline a standard high level structure for a MERN stack application and explain the components
 
 ![MERN stack structure from MongoDB](MERNstructure.png)
+(MongoDB, 2022)
+
 A MERN stack application consists of the four main technologies: MongoDB, Express.JS, React and Node.JS. The tech stack makes up a standard three-tier architecture, which consists of a front end/display tier, back end/application tier and database tier (MongoDB, 2022).  
 
 The web tier (which can also be referred to as the front end of the app), is made using React. It’s responsible for controlling what a user can interact with on the screen and renders to the screen (in HTML) a dynamic user interface that a user can interact with, which will update with dynamic data when the user performs actions. The React front end will contain Components, Service and Navigation/Router. React needs to handle which requests are made when a user performs an action such as clicking a button, deleting a comment or entering something into an input box and it does this through communicating with the backend. 
@@ -90,8 +95,8 @@ if (isRaining == true) {
 
 This allows us to control the flow of the program depending upon a boolean condition. The ``if`` statement will only run if the condition inside it is ``true``, ie ``isRaining == true`` evaluates to ``true``. Therefore, above, as ``isRaining`` is ``true``, the console will log “It’s raining outside” and the other statements will not run. If ``isRaining`` were ``false``, the statement ``isRaining == true`` would evaluate to ``false``, and that line would not run. The program would instead skip to the next statement to evaluate whether ``isRaining == false`` evaluates to ``true``. If it does, the line ``console.log('It’s not raining outside')`` will be run. The ``else`` allows us to account for any other unexpected value that the variable ``isRaining`` might be holding, and will run if none of the other conditions return true. Using the ``if`` statement in this program allows for a much more customised program which is able to return custom outputs depending on the value of the variable. 
 
-Another JavaScript control structure example is loops, which are able to perform repeated tasks based on a condition (). When a program encounters a loop, it will stop when it gets to the loop and continually run the code with the loop until the given condition is false. 
-For example, when encountering the below for loop, the program will continually evaluate the condition of ``i`` until it is no longer less than or equal to 5, resulting in the numbers 1 to 5 being printed to the console. 
+Another JavaScript control structure example is loops, which are able to perform repeated tasks based on a given condition. When a program encounters a loop, it will stop when it gets to the loop and continually run the code with the loop until the given condition is false. 
+For example, when encountering the below ``for loop``, the program will continually evaluate the condition of ``i`` until it is no longer less than or equal to 5, resulting in the numbers 1 to 5 being printed to the console. 
 
 ```JavaScript
 // Here we initialise the loop that must run so long as i<=5
@@ -103,7 +108,7 @@ for (i = 1; i <= 5; i++) {
 
 We could achieve the same result using a different type loop such as a ``while`` loop or a ``do…while`` loop, but in general loops are considered an efficient way to control the flow of the program when we need to continually run a certain block of code.
 
-When we need to be able to reuse a certain block of code, we can create a function. We only need to create a function once and we will be able to continually use it throughout the rest of our program when it is invoked within our code or when an event occurs (such as a user clicking a button). We can call a JS function that we have created within our program by using the name of the function and a set of parentheses ``()`` , eg if our function is called ``getUserName``, we would invoke it by simply writing ``getUserName()`` . Functions are extremely useful in JS as they allow us to call the same code as many times as we need do as well as use different arguments on it, which can produce different results (W3 Schools, 2022). When our code reaches the line where the function is called or a user performa an action that invokes the function call, it will execute the code defined within the function, using any arguments it was given upon calling it, making functions an extremely useful and common way to control the flow of any type of program in JS.
+When we need to be able to reuse a certain block of code, we can create a function. We only need to create a function once and we will be able to continually use it throughout the rest of our program when it is invoked within our code or when an event occurs (such as a user clicking a button). We can call a JS function that we have created within our program by using the name of the function and a set of parentheses ``()`` , eg if our function is called ``getUserName``, we would invoke it by simply writing ``getUserName()`` . Functions are extremely useful in JS as they allow us to call the same code as many times as we need do as well as use different arguments on it, which can produce different results (W3 Schools, 2022). When our code reaches the line where the function is called or a user performs an action that invokes the function call, it will execute the code defined within the function, using any arguments it was given upon calling it, making functions an extremely useful and common way to control the flow of any type of program in JS.
 
 
 ### Q8 Explain type coercion, using examples from the JavaScript programming language.
@@ -117,7 +122,7 @@ if ("5" == 5) {
 	console.log("That number is equal to 5!");
 }
 ```
-Although we are essentially comparing a string data type to an integer data type, JavaScript will automatically perform a **type coercion**, and this expression will return true, and so the following piece of code will be run. 
+Although we are essentially comparing a string data type to an integer data type, JavaScript will automatically perform a **type coercion**, which will automatically convert both expressions into the same data type in order to compare them. In the above example, once both ``"5"`` and ``5`` have been converted to the same datas type, it will be evident that they contain the same informastion, so this expression will return true, and the following piece of code will be run. 
 
 We can on the other hand use a strict comparative operator, which tells JS to not perform the type coercion and require that the information on either side of the comparative operator must not only contain the same information, the data type also needs to be the same. The code for that would look like this:
 
@@ -129,7 +134,7 @@ if ("5" === 5) {
 
 Because we have used the ``===``, which is a strict comparative operator, the expression of ``"5" === 5`` returns false and the console.log will not run.
 
-JavaScript is a language that performt type coercion automatically or implicitly, meaning that we as the programmer do not need to ask the program to do this in any way, it will automatically be performed for us. 
+JavaScript is a language that performs type coercion automatically (or implicitly), meaning that we as the programmer do not need to ask the program to do this in any way, it will automatically be performed for us. 
 
 ### Q9 Explain data types, using examples from the JavaScript programming language 
 
@@ -163,6 +168,7 @@ Different data types also have different built-in methods that can be used on th
 Arrays can be manipulated in a range of ways in JavaScript , due to the range of methods built in to the language. Some commonly utulised methods are detailed below as examples.
 
 **Creating a new array from an existing array**
+
 The ``map()`` method is commonly used to mutate arrays, and can be used in order to apply a given method individually to each element in an array, and create a new array with the resulting values. For example, if we have an array called cities:
 
 ```const cities = ['Melbourne', 'Sydney', 'Gold Coast', 'Los Angeles']```
@@ -174,6 +180,7 @@ And we would like to create a new array using all the existing elements within t
 By calling the ``map()`` method, on the ``cities`` array, we are able to iterate over the array using the variable ``x``. We then call the .toLowerCase() method on each iteration (or each element in the array) and save the result of this to a new variable called ``lowercaseCities``. By doing this we are able to create a whole new array using our cities array, without affecting or mutating the contents of the original array. Calling ``console.log`` on ``cities`` will still return ``[ 'Melbourne', 'Sydney', 'Gold Coast', 'Los Angeles' ]``, whereas if we ``console.log`` what is now stored in ``lowercaseCities``, we return ``[ 'melbourne', 'sydney', 'gold coast', 'los angeles' ]``.
 
 **Filtering items of an array**
+
 Another extremely useful method is filtering items of an array using the built in filter() method, which allows us to only show some elements of an array. 
 
 Using our cities array from above, we can filter this array to return only certain elements depending upon a certain condition. If we would like to return only cities that have a character length of more than six, we could do it like so:
@@ -185,13 +192,14 @@ Calling .filter() will create a new array, containing only the filtered elements
 If we check to see what is stored in the variable longerCities that was created using the filter method on the cities array, the program will return ``[ 'Melbourne', 'Gold Coast', 'Los Angeles' ]``. Essentially without affecting the original cities array, we now have an array which has removed the element ``Sydney`` as the word cntains only six characters, and only returned to us in the new array the condition we specified in our filter method (``city.length > 6``). As the method iterates over the array, it checks to see if each element matches the condition and if it does not it will be filtered out.
 
 **Joining two arrays together**
+
 The .concat() method is useful for joining together two arrays. For example if we would like to join another array with our ``cities`` array from above, we can call the .concat() method on our cities array, using an additional array that we would like to join to the array as an argument. This will result in 
 
 This method can be extremely useful for combining different pieces of data that are stored in different arrays for use as one array, which would make it easier to then perform additional operations to, for example any of those listed above.
 
 **Converting an array into an Object**
-8.14 of youtube vid.
-It is also possible to convert our array to a different data type such as an Object, using a method like .fromEntries(). As a practical example, let's say we have a 
+
+It is also possible to convert our array to a different data type such as an Object, using a method like ``.fromEntries().`` As a practical example, let's say we have an object called ``car`` which contains a nested array containing key-value pairs inside of it:
 
 ```JavaScript
 const car = [
@@ -199,8 +207,11 @@ const car = [
 	['colour', 'Red']
 ]
 ```
+In order to convert this array into an object, we can simply call the .fromEntries() method with car as it's argument, like so: 
 
 ```const carAsObject = Object.fromEntries(car)```
+
+This will result in a new object where the properties match those that were in the initial car array.
 
 Being able to manipulate an array in this way can prove extremely useful for frameworks and libraries, and in general being able to convert data. 
 
@@ -221,6 +232,7 @@ Of course, in a more sophisticated program we can perform many more operations t
 There are a multitude of built-in methods that can be used on objects in JavaScript, so I have provided a select few as examples below;
 
 **Assigning new properties to an object**
+
 Using the ``.assign()`` method on an object allows us to both override properties that the object already contains as well as create new ones. If we have for example a ``person`` object:
 
 ```JavaScript
@@ -312,30 +324,30 @@ There are also some extremely useful methods for returning data that is stored i
 ```JavaScript
 // this line declares a new class with the name Car
 class Car {
-  // the constructor method for the class defines how the Car class will be created and initialized. Objects made with the Car class will take a brand as an argument.... XXXXXMORE HEREXXXXX
+  // the constructor method for the class defines how the Car class will be created and initialized. Objects made with the Car class will take a brand as an argument.
   constructor(brand) {
     // the brand argument that is passed through on creation will be a property of the class called 'carname'
     this.carname = brand;
   }
-  // here a method named present() is defined, this method will be unique to object of the class Car.
+  // here a method named present() is defined, this method will be unique to objects that are of the class Car.
   present() {
-    // the present method, when called later in the program will simply return the string 'I have a ', concatenated with the current objects' carname (aka the brand argument that was passed in on creation of the object).
+    // the present method, when called, will simply return the string 'I have a ', concatenated with the current objects' carname (aka the brand argument that was passed in on creation of the object).
     return 'I have a ' + this.carname;
   }
 }
 
 
-// This line declares the class named ‘Model’ which extends from the class Car. This means it inherits from Car and has access to all of the properties and functions, as well as any properties and functions unique to the Model class
+// This line declares the class named ‘Model’ which extends from the class Car. This means it inherits from Car and has access to all of it's properties and functions, as well as any properties and functions unique to the Model class
 class Model extends Car {
   // the constructor method is defined here for the Model class, it adds to the constructor method that's been created in the Car class by including an additional argument on creation, which is stored in the variable 'mod'.
   constructor(brand, mod) {
-    // the super line allows access to the properties in the superclass (Car). By using the super key word, it invokes the superclasses constructor method for the 'brand.
+    // the super line allows access to the properties in the superclass (Car). By using the super key word, it invokes the superclasses constructor method for the 'brand' argument that is used when initialising an instance of the class.
     super(brand);
-    // We can't access the newly passed in mod variable the same way as above, as it is not a part of the superclasses constructor method. So instead we declare here that the brand mod that is passed in on creation will be a property of the class called 'model'.
+    // We can't access the newly passed in mod variable the same way as above, as it is not a part of the superclasses constructor method. So instead we declare here that the argument 'mod' that is passed in on creation will be a property of the class called 'model'.
     this.model = mod;
   }
 
-  // defines a new method called show(), 
+  // defines a new method called show() that is unique to the Model class
   show() {
     // the return value of this method uses the .present() method, which this class has access to due to being a child of the superclass Car where this method exists. The present() method returns a string containing 'I have a ' concatenated with the carname. This return statement will first invoke that, and then concatenate that result with another string containing ', it was made in ' and a string containing the model property that is unique to the Model class. It will result in a string that looks something like 'I have a Ford, it was made in 1981'
     return this.present() + ', it was made in ' + this.model;
@@ -345,22 +357,20 @@ class Model extends Car {
 // declares a new variable named makes, which stores an array containing 3 string values.
 let makes = ["Ford", "Holden", "Toyota"]
 
-// declares a new variable named models, which stored an array.
-// this array is constructed using the Array.from() method which will create an array from the argument passed to it.
-// what is passed to it is a new Array consisting of 40 values, and a method to be performed on each item, which adds 1980 to each item. On each iteration as this new array is being created, this will increase by one, creating an array of 40 individual numbers which start at 1980 and go to 2019.
+// declares a new variable named models, which stores an array. This array is constructed using the Array.from() method which will create an array from the argument passed to it. What is passed to it is a new Array consisting of 40 values, and a method to be performed on each item, which adds 1980 to each item. On each iteration as this new array is being created, this will increase by one, creating an array of 40 individual numbers which start at 1980 and go up to 2019.
 let models = Array.from(new Array(40), (x,i) => i + 1980)
 
 // here a new function is defined with the name randomIntFromInterval. It takes two arguments, stored in the temporary variables min and max.
 function randomIntFromInterval(min,max) { // min and max included
-    // this line defines what the function will return. The randomIntfromInterval function will return a number, 
+    // this line defines what the function will return. The randomIntfromInterval function will return a number that has been created with the Math.random() method and multiplying it with the max minus the min variables that were passed as an argument to the function and then adding the min.
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
 // initiates a for loop to iterate over the models array.
 for (model of models) {
-  // the make variable is assigned to a random result produced using the makes array. The makes array is used by calling its name makes with [] square brackets to provide the index to access. To provide the index, the randomIntFromInterval method is called, with 0 as the minimum value and makes.length (the length of the array) -1 as the maximum.
+  // the make variable is assigned to a random result produced using the makes array. The makes array is used by calling its name, 'makes', with [] square brackets to provide the index to access. To provide the index, the randomIntFromInterval method is called, with 0 as the minimum value and makes.length (the length of the array) -1 as the maximum.
   make = makes[randomIntFromInterval(0,makes.length-1)]
-  // here the same is done as above, however it declares that the model variable be assigned to a random index using the models array.
+  // here the same is done as above, however it declares that the model variable be assigned to a random index of the models array.
   model = models[randomIntFromInterval(0,makes.length-1)]
 
   
@@ -370,6 +380,9 @@ for (model of models) {
   console.log(mycar.show())
 } 
 ```
+
+
+
 
 
 
